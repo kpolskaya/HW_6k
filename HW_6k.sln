@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_6k", "HW_6k\HW_6k.csproj", "{3EDB1314-90B7-41BF-A097-72164D222433}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "НОД", "НОД\НОД.csproj", "{00DC4C3D-66AD-4905-8D7B-8EE623D52D8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "НОД", "НОД\НОД.csproj", "{00DC4C3D-66AD-4905-8D7B-8EE623D52D8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrND", "GrND\GrND.csproj", "{66FED7FF-2287-4DDB-B2F7-68E5F108BD04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrND", "GrND\GrND.csproj", "{66FED7FF-2287-4DDB-B2F7-68E5F108BD04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Простые числа", "Простые числа\Простые числа.csproj", "{13F0ACB4-DF49-413B-B780-BBF2F6D65F24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Простые числа", "Простые числа\Простые числа.csproj", "{13F0ACB4-DF49-413B-B780-BBF2F6D65F24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Простые числа 2", "Простые числа 2\Простые числа 2.csproj", "{94777B22-9B5D-45CB-A0AD-2178F8B114E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Простые числа 3", "Простые числа 3\Простые числа 3.csproj", "{5E587532-2B77-4B0C-88CA-BEE328CC915F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{13F0ACB4-DF49-413B-B780-BBF2F6D65F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F0ACB4-DF49-413B-B780-BBF2F6D65F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F0ACB4-DF49-413B-B780-BBF2F6D65F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94777B22-9B5D-45CB-A0AD-2178F8B114E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94777B22-9B5D-45CB-A0AD-2178F8B114E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94777B22-9B5D-45CB-A0AD-2178F8B114E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94777B22-9B5D-45CB-A0AD-2178F8B114E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E587532-2B77-4B0C-88CA-BEE328CC915F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E587532-2B77-4B0C-88CA-BEE328CC915F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E587532-2B77-4B0C-88CA-BEE328CC915F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E587532-2B77-4B0C-88CA-BEE328CC915F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

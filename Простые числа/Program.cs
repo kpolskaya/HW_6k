@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections;
 using System.Text;
 
 namespace ConsoleApplication1
@@ -9,35 +10,53 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int n;//число до которого будем находить простые числа
-            n = int.Parse(Console.ReadLine());//вводим N
-            for (int i = 2; i <= n; i++)
+            DateTime start = DateTime.Now;
+            int n = 1000000000;
+            int topNumber = n+1;
+            int i;
+            byte[] gr = new byte[n +1];
+            int[] numbers = new int[n+ 1];
+
+            for (i = 2; i < topNumber; i++)
             {
-                if (isSimple(i))
+                if (numbers[i] == 0)
+
                 {
-                    Console.Write(i.ToString() + ",");
+                    for (int j = i * 2; j < topNumber; j += i)
+                        if (numbers[j] == 0)
+                            numbers[j] = i;
                 }
-            }Console.ReadKey();
-        }
-        //метод который определяет простое число или нет
-        private static bool isSimple(int n)
-        {
-            bool tf = false;
-            //чтоб убедится простое число или нет достаточно проверить не делитсья ли 
-            //число на числа до его половины
-            for (int i = 2; i < (int)(n / 2); i++)
-            {
-                if (n % i == 0)
+            }
+            gr[0] = 1;
+            gr[1] = 1;
+            gr[2] = 2;
+            gr[3] = 2;
+
+            for (i = 4; i < topNumber; i++)
+            { 
+                if (numbers[i] == 0)
                 {
-                    tf = false; 
-                    break;
+                    gr[i] = 2;
                 }
                 else
                 {
-                    tf = true;
+                    int k = i / numbers[i];
+                    gr[i] = (byte)(gr[k] + 1);
                 }
             }
-            return tf;
+
+            //Array.ForEach(numbers, Console.WriteLine);
+            //Console.WriteLine();
+            //Array.ForEach(gr, Console.WriteLine);
+            TimeSpan timeSpan1 = DateTime.Now.Subtract(start);
+            Console.WriteLine($"timeSpan.TotalSeconds = {timeSpan1.TotalSeconds}");
+            //Console.WriteLine();
+
+            Console.ReadKey();
+
         }
+      
     }
 }
+
+  

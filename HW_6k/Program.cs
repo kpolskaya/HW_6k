@@ -143,7 +143,7 @@ namespace HW_6
             ///   В обязательном порядке создать несколько собственных методов
 
             DateTime start = DateTime.Now;
-            int n =1000;
+            int n =10;
             int[] mas = new int[n-1];
             for (int j = 0; j < n-1; j++)
                 mas[j] = j+2;
@@ -169,7 +169,8 @@ namespace HW_6
             TimeSpan timeSpan0 = DateTime.Now.Subtract(start);
             Console.WriteLine($"начало GroupND  = {timeSpan0.TotalSeconds}");
             int m;
-           int[][] groups = new int[200000][];
+            int[] gr = new int[mas.Length];
+            int[][] groups = new int[20][];
             groups[1] = GroupND2(mas);
             
             ////Array.ForEach(groups[1], Console.Write);
@@ -185,13 +186,13 @@ namespace HW_6
             {
                 Console.WriteLine($"группа {m}");
                      
-                int[] gr = GroupND(mas);
+                gr = GroupND(mas);
                 TimeSpan timeSpan2 = DateTime.Now.Subtract(start);
                 Console.WriteLine($"длительность GroupND = {timeSpan2.TotalSeconds- timeSpan1.TotalSeconds}");
 
                 //Array.ForEach(mas, Console.Write);
                 //Console.WriteLine();
-                //Array.ForEach(gr, Console.Write);
+                Array.ForEach(gr, Console.WriteLine);
                 //Console.WriteLine();
                 groups[m] = new int[gr.Length];
                 groups[m] = gr;
@@ -205,8 +206,8 @@ namespace HW_6
             Console.WriteLine($"Количество групп {m}");
 
 
-            ////int[] Lastarr = mas.Except<int>(gr).ToArray<int>();         // переделать
-            ////Array.ForEach(Lastarr, Console.Write);
+            int[] Lastarr = mas.Except<int>(gr).ToArray<int>();         // переделать
+            Array.ForEach(Lastarr, Console.WriteLine);
             TimeSpan timeSpan = DateTime.Now.Subtract(start);
             Console.WriteLine($"timeSpan.TotalSeconds = {timeSpan.TotalSeconds}");
 
